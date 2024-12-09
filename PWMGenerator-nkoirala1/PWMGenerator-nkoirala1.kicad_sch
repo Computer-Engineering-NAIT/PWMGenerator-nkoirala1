@@ -12,31 +12,33 @@
 		(comment 1 "Naresh Prasad Koirala")
 	)
 	(lib_symbols
-		(symbol "Connector:Barrel_Jack"
+		(symbol "Comparator:LM339"
 			(pin_names
-				(offset 1.016)
+				(offset 0.127)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.334 0)
+			(property "Reference" "U"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "Barrel_Jack"
+			(property "Value" "LM339"
 				(at 0 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 1.27 -1.016 0)
+				(at -1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -44,8 +46,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 1.27 -1.016 0)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
+				(at 1.27 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -53,7 +55,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "DC Barrel Jack"
+			(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
 				(at 0 0 0)
 				(effects
 					(font
@@ -62,7 +64,15 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "DC power barrel jack connector"
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cmp open collector"
 				(at 0 0 0)
 				(effects
 					(font
@@ -71,7 +81,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "BarrelJack*"
+			(property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm* TSSOP*4.4x5mm*P0.65mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -80,10 +90,11 @@
 					(hide yes)
 				)
 			)
-			(symbol "Barrel_Jack_0_1"
-				(rectangle
-					(start -5.08 3.81)
-					(end 5.08 -3.81)
+			(symbol "LM339_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -92,69 +103,102 @@
 						(type background)
 					)
 				)
-				(arc
-					(start -3.302 3.175)
-					(mid -3.9343 2.54)
-					(end -3.302 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -3.302 3.175)
-					(mid -3.9343 2.54)
-					(end -3.302 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
-						(xy 5.08 2.54) (xy 3.81 2.54)
+						(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+						(xy 2.286 -0.508)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.127)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -3.81 -2.54) (xy -2.54 -2.54) (xy -1.27 -1.27) (xy 0 -2.54) (xy 2.54 -2.54) (xy 5.08 -2.54)
+				(pin open_collector line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
-				(rectangle
-					(start 3.683 3.175)
-					(end -3.302 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
-					(fill
-						(type outline)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
-			(symbol "Barrel_Jack_1_1"
-				(pin passive line
-					(at 7.62 2.54 180)
+			(symbol "LM339_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+						(xy 2.286 -0.508)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -171,8 +215,107 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 7.62 -2.54 180)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM339_3_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+						(xy 2.286 -0.508)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -181,7 +324,126 @@
 							)
 						)
 					)
-					(number "2"
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM339_4_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.508) (xy 2.794 -0.508) (xy 3.302 0) (xy 2.794 0.508) (xy 2.286 0) (xy 2.794 -0.508)
+						(xy 2.286 -0.508)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM339_5_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -383,6 +645,456 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C_Polarized"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C_Polarized_US"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized_US"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor, US symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_US_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.778) (xy -1.27 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.032 -1.27)
+					(mid 0 -0.5572)
+					(end -2.032 -1.27)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Polarized_US_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 3.302)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:Fuse"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -713,6 +1425,338 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R_US"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_US"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.016 -0.254 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, US symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_US_0_1"
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_US_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Diode:1N4005"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4005"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "600V 1A General Purpose Rectifier Diode, DO-41"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?41*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4005_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4005_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1320,35 +2364,445 @@
 				)
 			)
 		)
+		(symbol "Simulation_SPICE:VSIN"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.0254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "V"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "VSIN"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Voltage source, sinusoidal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Sim.Type" "SIN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "simulation ac vac"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VSIN_0_0"
+				(arc
+					(start 0 0)
+					(mid -0.635 0.6323)
+					(end -1.27 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.635 -0.6323)
+					(end 1.27 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "+"
+					(at 0 1.905 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "VSIN_0_1"
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "VSIN_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Switch:SW_SPST"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPST"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single Pole Single Throw (SPST) switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch lever"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPST_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy 1.524 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPST_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(symbol
-		(lib_id "Connector:Barrel_Jack")
-		(at 26.67 27.94 0)
+		(lib_id "Diode:1N4005")
+		(at 53.34 121.92 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "20624ea7-647d-4230-969e-f0b7ec21dadd")
-		(property "Reference" "J1"
-			(at 26.67 19.05 0)
+		(uuid "0108bfe4-f9c6-4796-bb6d-db666a66cd03")
+		(property "Reference" "D5"
+			(at 55.88 120.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "Barrel_Jack"
-			(at 26.67 21.59 0)
+		(property "Value" "1N4005"
+			(at 55.88 123.1899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_BarrelJack:BarrelJack_CLIFF_FC681465S_SMT_Horizontal"
-			(at 27.94 28.956 0)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 48.895 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 53.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600V 1A General Purpose Rectifier Diode, DO-41"
+			(at 53.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 53.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 53.34 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "55456047-bf7e-4049-a3c8-c0339913dd6f")
+		)
+		(pin "1"
+			(uuid "09d1f8ea-9119-4b21-b370-ecfe2a702663")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 166.37 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "103bed34-af69-4dfc-b68c-b2e0237549c8")
+		(property "Reference" "R5"
+			(at 168.91 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 168.91 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.386 95.504 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1357,7 +2811,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 28.956 0)
+			(at 166.37 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1365,8 +2819,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "DC Barrel Jack"
-			(at 26.67 27.94 0)
+		(property "Description" "Resistor, US symbol"
+			(at 166.37 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1375,15 +2829,86 @@
 			)
 		)
 		(pin "1"
-			(uuid "16432ce3-a302-432e-9e22-6ac96b7c578c")
+			(uuid "dfa699d4-3260-413d-9dea-1dd13580211e")
 		)
 		(pin "2"
-			(uuid "b7d2c346-8661-443c-b79c-f73d7cee0414")
+			(uuid "0e6e7b1d-9ed9-4de2-8084-30604537f793")
 		)
 		(instances
-			(project ""
+			(project "PWMGenerator-nkoirala1"
 				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
-					(reference "J1")
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 132.08 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "132f485f-7bb5-4151-bcea-9832f26e36c0")
+		(property "Reference" "R3"
+			(at 134.62 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 134.62 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.096 95.504 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 132.08 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2d3d1ea-4ca3-4e65-a8a3-3d0c041230f0")
+		)
+		(pin "2"
+			(uuid "ac36e60f-feea-46f8-9c20-62b4682c2077")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -1391,7 +2916,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LM7805_TO220")
-		(at 30.48 76.2 0)
+		(at 100.33 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1400,7 +2925,7 @@
 		(fields_autoplaced yes)
 		(uuid "2170f099-7149-40d0-bb08-a197e0ae87dd")
 		(property "Reference" "U1"
-			(at 30.48 69.85 0)
+			(at 100.33 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1408,7 +2933,7 @@
 			)
 		)
 		(property "Value" "LM7805_TO220"
-			(at 30.48 72.39 0)
+			(at 100.33 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1416,7 +2941,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 30.48 70.485 0)
+			(at 100.33 84.455 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1426,7 +2951,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF"
-			(at 30.48 77.47 0)
+			(at 100.33 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1435,7 +2960,7 @@
 			)
 		)
 		(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
-			(at 30.48 76.2 0)
+			(at 100.33 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1462,17 +2987,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 34.29 57.15 0)
+		(lib_id "Diode:1N4005")
+		(at 41.91 121.92 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "32b45374-fe52-4daf-b801-216d953ca7df")
-		(property "Reference" "RV1"
-			(at 31.75 55.8799 0)
+		(uuid "25c3b32b-524e-48c7-9e79-9c949f57e059")
+		(property "Reference" "D4"
+			(at 44.45 120.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1480,8 +3005,87 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R_Potentiometer"
-			(at 31.75 58.4199 0)
+		(property "Value" "1N4005"
+			(at 44.45 123.1899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 46.355 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 41.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600V 1A General Purpose Rectifier Diode, DO-41"
+			(at 41.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 41.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 41.91 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3475e9ad-6029-4450-af0a-e83f1ab950fe")
+		)
+		(pin "1"
+			(uuid "61449e2b-df6a-47ed-8d5e-06ac2f36e1ec")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
+		(at 22.86 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c07bd10-cdd4-4da2-894f-3fcbd12a701c")
+		(property "Reference" "SW1"
+			(at 23.876 96.774 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1489,8 +3093,18 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
-			(at 34.29 57.15 0)
+		(property "Value" "SW_SPST"
+			(at 24.13 97.7899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1499,7 +3113,78 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 34.29 57.15 0)
+			(at 22.86 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single Pole Single Throw (SPST) switch"
+			(at 22.86 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0cb60bf-25f8-4346-af08-f6c15b1da750")
+		)
+		(pin "2"
+			(uuid "913ba406-1ced-4a3b-ad66-40d86ff00548")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 196.85 123.19 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "32b45374-fe52-4daf-b801-216d953ca7df")
+		(property "Reference" "RV1"
+			(at 199.39 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R_Potentiometer"
+			(at 199.39 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
+			(at 196.85 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 196.85 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1508,7 +3193,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 34.29 57.15 0)
+			(at 196.85 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1535,17 +3220,106 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NPN")
-		(at 59.69 77.47 0)
+		(lib_id "Diode:1N4005")
+		(at 41.91 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "688a4d41-9eba-4ab1-80cf-70a1c3da7ca3")
-		(property "Reference" "Q1"
-			(at 64.77 76.1999 0)
+		(uuid "377d3f5e-7d28-4e41-b8e7-3009736624cd")
+		(property "Reference" "D2"
+			(at 44.45 104.1399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4005"
+			(at 44.45 106.6799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 37.465 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 41.91 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600V 1A General Purpose Rectifier Diode, DO-41"
+			(at 41.91 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 41.91 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 41.91 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6d1d6f42-b6c4-449c-ae8e-f8445d7390eb")
+		)
+		(pin "1"
+			(uuid "8813ab83-1aad-4a09-b7f8-36cc1dae7861")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:NPN")
+		(at 151.13 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "42d26b42-3113-4d11-ba4b-762670d33f91")
+		(property "Reference" "Q3"
+			(at 156.21 120.6499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1554,16 +3328,17 @@
 			)
 		)
 		(property "Value" "NPN"
-			(at 64.77 78.7399 0)
+			(at 156.21 123.1899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92"
-			(at 123.19 77.47 0)
+			(at 214.63 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1572,7 +3347,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-			(at 123.19 77.47 0)
+			(at 214.63 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1581,7 +3356,7 @@
 			)
 		)
 		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
-			(at 59.69 77.47 0)
+			(at 151.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1590,7 +3365,7 @@
 			)
 		)
 		(property "Sim.Device" "NPN"
-			(at 59.69 77.47 0)
+			(at 151.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1599,7 +3374,7 @@
 			)
 		)
 		(property "Sim.Type" "GUMMELPOON"
-			(at 59.69 77.47 0)
+			(at 151.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1608,7 +3383,426 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 59.69 77.47 0)
+			(at 151.13 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "23100f34-8fbe-4ff1-b255-e485e97c0a40")
+		)
+		(pin "3"
+			(uuid "5e0243ba-f840-489e-a7ce-11e9b74a759b")
+		)
+		(pin "1"
+			(uuid "288d106d-232f-499a-aa2c-1a732ffce00b")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:VSIN")
+		(at 22.86 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44f25052-1307-42d4-a098-b061d92616d8")
+		(property "Reference" "V1"
+			(at 26.67 109.0901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VSIN"
+			(at 26.67 111.6301 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+			(at 22.86 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Voltage source, sinusoidal"
+			(at 22.86 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 22.86 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+			(at 26.67 114.1701 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "SIN"
+			(at 22.86 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 22.86 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "eacc12d0-9018-4445-a40d-985412e5f89d")
+		)
+		(pin "1"
+			(uuid "379fba71-75f2-4307-9ca0-3bc89c67d00f")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "V1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_US")
+		(at 87.63 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c29203b-d22c-4ad7-8821-c39d0e850861")
+		(property "Reference" "C1"
+			(at 91.44 99.6949 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Polarized_US"
+			(at 88.646 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, US symbol"
+			(at 87.63 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7bfcd603-70eb-4055-b8bc-243b041d2c60")
+		)
+		(pin "1"
+			(uuid "7f701a97-909a-4fbf-8812-a5cf671ddf63")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 181.61 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c9ce7cc-8cf0-47b7-bfcf-5a2669a7a44a")
+		(property "Reference" "R7"
+			(at 184.15 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 184.15 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.626 95.504 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 181.61 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a18e1c9-5aff-4323-9b6e-078264804fc4")
+		)
+		(pin "2"
+			(uuid "adb45212-0b74-41f9-b689-6b092de13044")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 100.33 121.92 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "677058a3-a37d-47be-9c8e-5e79e461a2b7")
+		(property "Reference" "R2"
+			(at 100.33 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 101.092 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.584 120.904 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 100.33 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64ef923e-5398-4d11-8096-62f46fd41549")
+		)
+		(pin "2"
+			(uuid "705a340d-199f-416e-a3ca-55f77ce35545")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:NPN")
+		(at 119.38 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "688a4d41-9eba-4ab1-80cf-70a1c3da7ca3")
+		(property "Reference" "Q1"
+			(at 124.46 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NPN"
+			(at 124.46 123.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+			(at 182.88 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
+			(at 182.88 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "GUMMELPOON"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 119.38 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1635,17 +3829,104 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:PNP")
-		(at 60.96 101.6 0)
+		(lib_id "Diode:1N4005")
+		(at 73.66 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
+		(uuid "6b5ca636-fa1d-46c1-9d87-2855a32e54c7")
+		(property "Reference" "D6"
+			(at 73.66 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4005"
+			(at 73.66 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 73.66 85.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 73.66 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600V 1A General Purpose Rectifier Diode, DO-41"
+			(at 73.66 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 73.66 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "de776584-6675-45fc-ae37-0ab6af74b689")
+		)
+		(pin "1"
+			(uuid "f8cea4ce-2477-4886-8e94-26c350dd9e6a")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:PNP")
+		(at 179.07 109.22 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(uuid "6c86fd95-67a5-46ed-8599-5b1005629d6e")
 		(property "Reference" "Q2"
-			(at 66.04 100.3299 0)
+			(at 184.15 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1654,16 +3935,17 @@
 			)
 		)
 		(property "Value" "PNP"
-			(at 66.04 102.8699 0)
+			(at 184.15 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92"
-			(at 96.52 101.6 0)
+			(at 214.63 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1672,7 +3954,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-			(at 96.52 101.6 0)
+			(at 214.63 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1681,7 +3963,7 @@
 			)
 		)
 		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
-			(at 60.96 101.6 0)
+			(at 179.07 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1690,7 +3972,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 60.96 101.6 0)
+			(at 179.07 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1699,7 +3981,7 @@
 			)
 		)
 		(property "Sim.Type" "GUMMELPOON"
-			(at 60.96 101.6 0)
+			(at 179.07 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1708,7 +3990,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 60.96 101.6 0)
+			(at 179.07 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1735,33 +4017,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 63.5 44.45 0)
+		(lib_id "Device:R_US")
+		(at 227.33 106.68 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b1eac117-6f99-43bb-96f8-b1d093d3888a")
-		(property "Reference" "J2"
-			(at 64.135 36.83 0)
+		(uuid "6c8f1d1c-ffb6-4341-ab4f-da86d1288b47")
+		(property "Reference" "R9"
+			(at 227.33 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
-			(at 64.135 39.37 0)
+		(property "Value" "R_US"
+			(at 228.5999 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 63.5 44.45 0)
+		(property "Footprint" ""
+			(at 227.584 105.664 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1770,7 +4054,459 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 63.5 44.45 0)
+			(at 227.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 227.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "68e7895f-d216-43ab-bef3-585bf56418ee")
+		)
+		(pin "2"
+			(uuid "e83518c1-ec91-4b49-ad22-1901861081e8")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 181.61 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7832052f-f8af-48de-a33b-bc1ecb183afb")
+		(property "Reference" "C2"
+			(at 185.42 121.0309 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Polarized"
+			(at 185.42 123.5709 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.5752 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 181.61 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93e7d01d-0719-4c09-a527-30d3ed44f929")
+		)
+		(pin "2"
+			(uuid "c2f5235b-d124-4773-80ff-0ec4fe365d99")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 69.85 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e52a96a-f599-4e6f-9e79-98fb14841875")
+		(property "Reference" "R1"
+			(at 72.39 128.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 72.39 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 70.866 129.794 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 69.85 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60252d1f-0270-43c6-b0fb-f09513a5accd")
+		)
+		(pin "2"
+			(uuid "85d6d117-e1d1-41b8-9ca1-321552151f3a")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 147.32 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ddc51e2-3ada-4368-808c-6b857a4714cc")
+		(property "Reference" "R4"
+			(at 149.86 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 149.86 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.336 95.504 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 147.32 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02c842db-8a89-4093-ac12-e02bb7bb5f40")
+		)
+		(pin "2"
+			(uuid "52e84d99-19f5-4ad0-adc7-25fbd5f1a020")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_US")
+		(at 113.03 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a8a3437b-d3f5-4d79-b713-ef3c664bf654")
+		(property "Reference" "C3"
+			(at 116.84 99.6949 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Polarized_US"
+			(at 114.046 104.394 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, US symbol"
+			(at 113.03 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8e725b5b-2dbf-4fc9-8151-c50789c5c3f9")
+		)
+		(pin "1"
+			(uuid "dcd4af01-3413-4ba3-993d-6c2c374df159")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:PNP")
+		(at 241.3 106.68 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae35edd5-1b28-4d4f-abfd-d1b8b28f40b5")
+		(property "Reference" "Q4"
+			(at 246.38 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PNP"
+			(at 246.38 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+			(at 276.86 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
+			(at 276.86 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
+			(at 241.3 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "PNP"
+			(at 241.3 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "GUMMELPOON"
+			(at 241.3 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 241.3 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7f8aaed8-e058-47b0-9ecc-8db4f5757bf8")
+		)
+		(pin "3"
+			(uuid "e0a8e01b-8a43-45d2-8885-ce3c6667f28c")
+		)
+		(pin "1"
+			(uuid "0f62dc7a-4351-40e7-adb6-275bb418c6c6")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 259.08 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1eac117-6f99-43bb-96f8-b1d093d3888a")
+		(property "Reference" "J2"
+			(at 260.35 97.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03_Pin"
+			(at 259.715 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 259.08 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 259.08 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1779,7 +4515,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 63.5 44.45 0)
+			(at 259.08 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1806,33 +4542,140 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 27.94 43.18 0)
+		(lib_id "Comparator:LM339")
+		(at 212.09 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fe5981d4-ebc6-410c-933e-c7a18e74a2ef")
-		(property "Reference" "D1"
-			(at 26.3525 36.83 0)
+		(uuid "ba8a7670-2e8c-4aff-b240-14c68482a065")
+		(property "Reference" "U2"
+			(at 212.09 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "LED"
-			(at 26.3525 39.37 0)
+		(property "Value" "LM339"
+			(at 212.09 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 27.94 43.18 0)
+		(property "Footprint" ""
+			(at 210.82 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm139.pdf"
+			(at 213.36 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Quad Differential Comparators, SOIC-14/TSSOP-14"
+			(at 212.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "123d078a-6451-468c-b3e0-f2e43a13a2c8")
+		)
+		(pin "9"
+			(uuid "f761cf85-cbd9-46fb-9a77-293e287a647d")
+		)
+		(pin "13"
+			(uuid "3cc1d704-26e6-4efd-8bb5-bd1ca7622478")
+		)
+		(pin "10"
+			(uuid "6dae6751-b46f-422a-b3fa-846034b57645")
+		)
+		(pin "4"
+			(uuid "e12693c9-4e88-41c5-af66-a4b05ffffed0")
+		)
+		(pin "11"
+			(uuid "887484cf-b88e-44b6-a2b1-afb0a2a55cc8")
+		)
+		(pin "1"
+			(uuid "71108985-2d80-4509-ad23-5ba2ddef9d81")
+		)
+		(pin "2"
+			(uuid "86b931e9-9dca-4382-8737-459618dc41af")
+		)
+		(pin "7"
+			(uuid "2efcad0b-ace5-4f58-802f-406f709ba228")
+		)
+		(pin "12"
+			(uuid "274d6b37-2f03-4681-9db5-6c100a869510")
+		)
+		(pin "14"
+			(uuid "78cb319e-1ed0-4c45-803d-2a314981cb88")
+		)
+		(pin "3"
+			(uuid "96f62d9a-6c28-4a99-9262-7f73d6d26ca5")
+		)
+		(pin "5"
+			(uuid "94e7eeba-c0c9-4a16-a04f-dcf48b27a87d")
+		)
+		(pin "6"
+			(uuid "30e67c54-930d-4876-a281-95b21ebbf79d")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 196.85 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c4aebf9c-8c4e-481f-83e2-50073b36bc28")
+		(property "Reference" "R8"
+			(at 199.39 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 199.39 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 197.866 95.504 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1841,7 +4684,376 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 43.18 0)
+			(at 196.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 196.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a59688b7-18e5-479f-b425-56e207c6d339")
+		)
+		(pin "2"
+			(uuid "1bc5f45a-64fc-47a1-a6de-6c6ca8cbb9e1")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 243.84 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5ef8799-f18b-42bf-b578-7b47b40a2c7c")
+		(property "Reference" "R10"
+			(at 246.38 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 246.38 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 244.856 123.444 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 243.84 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 243.84 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "12ea0279-5139-4db1-904e-8b97c697f390")
+		)
+		(pin "2"
+			(uuid "5dc7f9e0-1dc8-4042-9760-71529746d904")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 35.56 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c724cb57-3943-4d5e-aeed-dbcaafbc5cc3")
+		(property "Reference" "F1"
+			(at 35.814 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse"
+			(at 35.56 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 35.56 90.678 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 35.56 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "332341a8-d729-4317-b1ad-178b70040825")
+		)
+		(pin "2"
+			(uuid "ef00ccbf-3d44-4693-8f7b-e5a7e0ce3d1c")
+		)
+		(instances
+			(project ""
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4005")
+		(at 53.34 105.41 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dbf6bdb1-9f09-4caa-b5bf-39fb26935c1c")
+		(property "Reference" "D3"
+			(at 55.88 104.1399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4005"
+			(at 55.88 106.6799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 57.785 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 53.34 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600V 1A General Purpose Rectifier Diode, DO-41"
+			(at 53.34 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 53.34 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 53.34 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8877fffe-da99-4b98-ba2e-b0f332199af5")
+		)
+		(pin "1"
+			(uuid "78c76ff4-796d-42df-9530-0eea4efb8dcf")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 165.1 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f60fa82c-8f9f-4111-b227-7e70cdc789c9")
+		(property "Reference" "R6"
+			(at 167.64 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_US"
+			(at 167.64 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.116 123.444 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 165.1 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "067fa9bf-5dc8-4f65-bea1-4bb364b512a3")
+		)
+		(pin "2"
+			(uuid "f153b086-c42f-4335-9bb9-d2aed3d8f7f5")
+		)
+		(instances
+			(project "PWMGenerator-nkoirala1"
+				(path "/6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe5981d4-ebc6-410c-933e-c7a18e74a2ef")
+		(property "Reference" "D1"
+			(at 133.604 123.444 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 134.62 126.0474 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 130.81 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1850,7 +5062,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 27.94 43.18 0)
+			(at 130.81 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
