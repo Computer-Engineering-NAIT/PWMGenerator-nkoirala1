@@ -1,5 +1,20 @@
-(kicad_sch (version 20231120) (generator "eeschema") (generator_version "8.0")
-  (paper "A4")
-  (lib_symbols)
-  (symbol_instances)
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "6cc81634-7f84-4baf-bf6f-e0ba6e6d2a37")
+	(paper "A")
+	(title_block
+		(title "CMPE2150 PWM Generator - nkoirala1")
+		(date "2024-12-09")
+		(rev "0")
+		(company "NAIT CNT")
+		(comment 1 "Naresh Prasad Koirala")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )
