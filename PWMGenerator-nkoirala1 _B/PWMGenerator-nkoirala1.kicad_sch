@@ -4571,7 +4571,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1N4005"
+		(property "Value" "1N4005G"
 			(at 55.88 123.1899 90)
 			(effects
 				(font
@@ -4581,7 +4581,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 48.895 121.92 0)
 			(effects
 				(font
@@ -4874,7 +4874,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4005"
+		(property "Value" "1N4005G"
 			(at 44.45 123.1899 90)
 			(effects
 				(font
@@ -4884,7 +4884,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 46.355 121.92 0)
 			(effects
 				(font
@@ -5107,7 +5107,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1N4005"
+		(property "Value" "1N4005G"
 			(at 44.45 106.6799 90)
 			(effects
 				(font
@@ -5117,7 +5117,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 37.465 105.41 0)
 			(effects
 				(font
@@ -5979,7 +5979,7 @@
 				)
 			)
 		)
-		(property "Value" "1N4005"
+		(property "Value" "1N4005G"
 			(at 73.66 86.36 0)
 			(effects
 				(font
@@ -5988,7 +5988,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 73.66 85.725 0)
 			(effects
 				(font
@@ -7269,7 +7269,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4005"
+		(property "Value" "1N4005G"
 			(at 55.88 106.6799 90)
 			(effects
 				(font
@@ -7279,7 +7279,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 57.785 105.41 0)
 			(effects
 				(font
@@ -7428,7 +7428,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "GREEN"
 			(at 135.89 132.3974 90)
 			(effects
 				(font
