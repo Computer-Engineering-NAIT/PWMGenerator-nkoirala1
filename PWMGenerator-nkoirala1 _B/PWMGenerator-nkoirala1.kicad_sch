@@ -5262,7 +5262,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NPN"
+		(property "Value" "2N3904"
 			(at 156.21 129.5399 0)
 			(effects
 				(font
@@ -5272,7 +5272,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 214.63 128.27 0)
 			(effects
 				(font
@@ -5813,7 +5813,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NPN"
+		(property "Value" "2N3904"
 			(at 124.46 129.5399 0)
 			(effects
 				(font
@@ -5823,7 +5823,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 182.88 128.27 0)
 			(effects
 				(font
@@ -6067,7 +6067,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PNP"
+		(property "Value" "2N3906"
 			(at 184.15 116.8399 0)
 			(effects
 				(font
@@ -6077,7 +6077,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 214.63 115.57 0)
 			(effects
 				(font
@@ -6783,7 +6783,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PNP"
+		(property "Value" "2N3906"
 			(at 246.38 114.2999 0)
 			(effects
 				(font
@@ -6793,7 +6793,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 276.86 113.03 0)
 			(effects
 				(font
