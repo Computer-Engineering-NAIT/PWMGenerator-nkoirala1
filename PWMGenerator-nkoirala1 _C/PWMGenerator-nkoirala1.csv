@@ -20,5 +20,5 @@
 "RV1","5kΩ","~","Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical","1",""
 "SW1","SW_SPST","~","Button_Switch_SMD:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin","1",""
 "U1","LM7805_TO220","https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF","Package_TO_SOT_THT:TO-220-3_Vertical","1",""
-"U2","LM339","https://www.st.com/resource/en/datasheet/lm139.pdf","Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm","1",""
+"U3","LM339","https://www.st.com/resource/en/datasheet/lm139.pdf","Package_SO:SOIC-14_3.9x8.7mm_P1.27mm","1",""
 "V1","VSIN","~","Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal","1",""

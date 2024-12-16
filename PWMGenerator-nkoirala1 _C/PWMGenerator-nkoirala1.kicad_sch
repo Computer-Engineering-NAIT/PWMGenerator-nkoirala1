@@ -5392,7 +5392,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 210.82 104.14 0)
 			(effects
 				(font
@@ -6225,7 +6225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 227.33 31.75 0)
 			(effects
 				(font
@@ -6420,7 +6420,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 210.82 104.14 0)
 			(effects
 				(font
@@ -7748,7 +7748,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 228.6 63.5 0)
 			(effects
 				(font
@@ -8088,7 +8088,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
 			(at 228.6 46.99 0)
 			(effects
 				(font
